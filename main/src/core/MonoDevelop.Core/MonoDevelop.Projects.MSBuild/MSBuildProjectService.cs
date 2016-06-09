@@ -927,6 +927,7 @@ namespace MonoDevelop.Projects.MSBuild
 
 					MonoDevelop.Core.Execution.RemotingService.RegisterRemotingChannel ();
 					var pinfo = new ProcessStartInfo (exe) {
+						Arguments = binDir,
 						WorkingDirectory = binDir,
 						UseShellExecute = false,
 						CreateNoWindow = true,
@@ -934,11 +935,6 @@ namespace MonoDevelop.Projects.MSBuild
 						RedirectStandardInput = true,
 					};
 					runtime.GetToolsExecutionEnvironment ().MergeTo (pinfo);
-
-					//HACK should instead pass binDir to the builder process and have it use a custom resolver
-					if (runtime is MonoTargetRuntime) {
-						pinfo.EnvironmentVariables ["MONO_PATH"] = binDir;
-					}
 
 					Process p = null;
 
