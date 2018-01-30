@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>MonoDevelop.AzureFunctions</RootNamespace>
     <AssemblyName>MonoDevelop.AzureFunctions</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -92,11 +92,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Templates\" />
-    <Folder Include="images\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
+    <PackageReference Include="Azure.Functions.Templates" Version="1.0.1-beta1" />
+    <PackageReference Include="Microsoft.AzureFunctions.ProjectTemplates" Version="1.0.0-beta3" />
+    <!-- FIXME
     <None Include="..\..\..\packages\Microsoft.AzureFunctions.ProjectTemplates.1.0.0-beta3\Microsoft.AzureFunctions.ProjectTemplates.1.0.0-beta3.nupkg">
       <Link>Templates\Microsoft.AzureFunctions.ProjectTemplates.nupkg</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -105,6 +103,7 @@
       <Link>Templates\Azure.Functions.Templates.nupkg</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
+    -->
     <MDDownload
         Include="https://dl.xamarin.com/uploads/at5p4wjtk44/azure-functions-cli-66a932fb.zip"
         SHA1="81a64e48067a1ef5da6396d151fcfbdfa75afa3c"

@@ -10,7 +10,7 @@
     <OutputType>Exe</OutputType>
     <AssemblyName>NUnitRunner</AssemblyName>
     <RootNamespace>NUnitRunner</RootNamespace>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -54,6 +54,8 @@
       <HintPath>..\..\..\..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
       <Private>False</Private>
     </Reference>
+    <PackageReference Include="NUnit" Version="2.6.4" />
+    <PackageReference Include="NUnit.Runners" Version="2.6.4" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="NUnitTestRunner.cs" />

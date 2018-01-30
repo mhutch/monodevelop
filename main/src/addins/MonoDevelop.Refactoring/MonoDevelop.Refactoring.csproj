@@ -10,7 +10,7 @@
     <OutputType>Library</OutputType>
     <AssemblyName>MonoDevelop.Refactoring</AssemblyName>
     <RootNamespace>MonoDevelop.Refactoring</RootNamespace>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -81,67 +81,9 @@
       <HintPath>..\..\..\external\Xamarin.Mac.dll</HintPath>
       <Private>False</Private>
     </Reference>
-    <Reference Include="System.Composition.AttributedModel">
-      <HintPath>..\..\..\build\bin\System.Composition.AttributedModel.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Composition.Runtime">
-      <HintPath>..\..\..\build\bin\System.Composition.Runtime.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>..\..\..\build\bin\System.Collections.Immutable.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.Workspaces">
-      <HintPath>..\..\..\build\bin\Microsoft.CodeAnalysis.Workspaces.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>..\..\..\build\bin\Microsoft.CodeAnalysis.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp.Workspaces">
-      <HintPath>..\..\..\build\bin\Microsoft.CodeAnalysis.CSharp.Workspaces.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp">
-      <HintPath>..\..\..\build\bin\Microsoft.CodeAnalysis.CSharp.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.Features">
-      <HintPath>..\..\..\build\bin\Microsoft.CodeAnalysis.Features.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.EditorFeatures">
-      <HintPath>..\..\..\build\bin\Microsoft.CodeAnalysis.EditorFeatures.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.ValueTuple">
-      <HintPath>..\..\..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Composition.TypedParts">
-      <HintPath>..\..\..\build\bin\System.Composition.TypedParts.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Composition.Hosting">
-      <HintPath>..\..\..\build\bin\System.Composition.Hosting.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.Workspaces.Desktop">
-      <HintPath>..\..\..\build\bin\Microsoft.CodeAnalysis.Workspaces.Desktop.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis.CSharp.EditorFeatures">
-      <HintPath>..\..\..\build\bin\Microsoft.CodeAnalysis.CSharp.EditorFeatures.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup Condition=" '$(Configuration)' == 'Debug' OR '$(Configuration)' == 'DebugMac' ">
-    <Reference Include="ClrHeapAllocationAnalyzer">
-      <HintPath>..\..\..\packages\ClrHeapAllocationAnalyzer.1.0.0.8\analyzers\dotnet\cs\ClrHeapAllocationAnalyzer.dll</HintPath>
-    </Reference>
+    <PackageReference id="ClrHeapAllocationAnalyzer" version="1.0.0.8" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AssemblyInfo.cs" />
@@ -392,7 +334,6 @@
     <None Include="MonoDevelop.CodeIssues\Pad\AnalysisState.cs" />
     <None Include="MonoDevelop.CodeIssues\Pad\AnalysisStateChangeEventArgs.cs" />
     <None Include="MonoDevelop.CodeIssues\Pad\CategoryGroupingProvider.cs" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ProjectExtensions>
     <MonoDevelop>

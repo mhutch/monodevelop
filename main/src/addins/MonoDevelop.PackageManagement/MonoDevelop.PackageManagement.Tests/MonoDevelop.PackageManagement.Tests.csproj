@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>MonoDevelop.PackageManagement.Tests</RootNamespace>
     <AssemblyName>MonoDevelop.PackageManagement.Tests</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
@@ -84,18 +84,11 @@
     <Reference Include="NuGet.Resolver">
       <HintPath>..\..\..\..\external\nuget-binary\NuGet.Resolver.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="NuGet.ProjectModel">
       <HintPath>..\..\..\..\external\nuget-binary\NuGet.ProjectModel.dll</HintPath>
     </Reference>
     <Reference Include="NuGet.LibraryModel">
       <HintPath>..\..\..\..\external\nuget-binary\NuGet.LibraryModel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>..\..\..\..\build\bin\System.Collections.Immutable.dll</HintPath>
-      <Private>False</Private>
     </Reference>
     <Reference Include="NuGet.Commands">
       <HintPath>..\..\..\..\external\nuget-binary\NuGet.Commands.dll</HintPath>
@@ -237,8 +230,5 @@
   <ItemGroup>
     <Folder Include="MonoDevelop.PackageManagement.Tests\" />
     <Folder Include="MonoDevelop.PackageManagement.Tests.Helpers\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="packages.config" />
   </ItemGroup>
 </Project>

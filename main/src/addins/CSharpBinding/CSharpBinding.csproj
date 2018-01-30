@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <AssemblyName>MonoDevelop.CSharpBinding</AssemblyName>
     <RootNamespace>CSharpBinding</RootNamespace>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
   </PropertyGroup>
@@ -133,22 +133,6 @@
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="Mono.Cairo" />
-    <Reference Include="System.Composition.AttributedModel">
-      <HintPath>..\..\..\build\bin\System.Composition.AttributedModel.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Reflection.Metadata">
-      <HintPath>..\..\..\build\bin\System.Reflection.Metadata.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>..\..\..\build\bin\System.Collections.Immutable.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.ValueTuple">
-      <HintPath>..\..\..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="templates\ConsoleProject.xpt.xml">
@@ -389,7 +373,6 @@
   <ItemGroup>
     <None Include="Makefile.am" />
     <None Include="MonoDevelop.CSharp.CodeRefactorings\ConvertToEnum\ConvertToEnumCodeRefactoringProvider.cs" />
-    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <InternalsVisibleTo Include="MonoDevelop.Ide.Tests" />

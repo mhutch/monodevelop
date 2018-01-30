@@ -112,6 +112,7 @@
       <Project>{42D1CE65-A14B-4218-B787-58AD7AA68513}</Project>
       <Name>Mono.Addins.CecilReflector</Name>
     </ProjectReference>
+    <PackageReference Include="LargeAddressAware" Version="1.0.1" Condition="$(OS) != 'Unix'" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
@@ -127,5 +128,4 @@
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
-  <Import Project="$(MSBuildThisFileDirectory)..\..\..\packages\LargeAddressAware.1.0.1\build\LargeAddressAware.targets" Condition="$(OS) != 'Unix' AND Exists('$(MSBuildThisFileDirectory)..\..\..\packages\LargeAddressAware.1.0.1\build\LargeAddressAware.targets')" />
 </Project>

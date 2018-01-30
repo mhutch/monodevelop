@@ -114,84 +114,24 @@
     <Reference Include="gtk-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
-    <Reference Include="ICSharpCode.SharpZipLib">
-      <HintPath>..\..\..\packages\JetBrains.SharpZipLib.Stripped.0.87.20170615.10\lib\net40\ICSharpCode.SharpZipLib.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TemplateEngine.Abstractions">
-      <HintPath>..\..\..\packages\Microsoft.TemplateEngine.Abstractions.1.0.0-beta2-20170523-241\lib\net45\Microsoft.TemplateEngine.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TemplateEngine.Core">
-      <HintPath>..\..\..\packages\Microsoft.TemplateEngine.Core.1.0.0-beta2-20170523-241\lib\net45\Microsoft.TemplateEngine.Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TemplateEngine.Core.Contracts">
-      <HintPath>..\..\..\packages\Microsoft.TemplateEngine.Core.Contracts.1.0.0-beta2-20170523-241\lib\net45\Microsoft.TemplateEngine.Core.Contracts.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TemplateEngine.Edge">
-      <HintPath>..\..\..\packages\Microsoft.TemplateEngine.Edge.1.0.0-beta2-20170523-241\lib\net45\Microsoft.TemplateEngine.Edge.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TemplateEngine.Orchestrator.RunnableProjects">
-      <HintPath>..\..\..\packages\Microsoft.TemplateEngine.Orchestrator.RunnableProjects.1.0.0-beta2-20170523-241\lib\net45\Microsoft.TemplateEngine.Orchestrator.RunnableProjects.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.TemplateEngine.Utils">
-      <HintPath>..\..\..\packages\Microsoft.TemplateEngine.Utils.1.0.0-beta2-20170523-241\lib\net45\Microsoft.TemplateEngine.Utils.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Composition, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <HintPath>..\..\..\packages\Microsoft.VisualStudio.Composition.15.3.38\lib\net45\Microsoft.VisualStudio.Composition.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Threading, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <HintPath>..\..\..\packages\Microsoft.VisualStudio.Threading.15.4.4\lib\net45\Microsoft.VisualStudio.Threading.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.VisualStudio.Validation, Version=15.3.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <HintPath>..\..\..\packages\Microsoft.VisualStudio.Validation.15.3.15\lib\net45\Microsoft.VisualStudio.Validation.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Mono.Cairo" />
     <Reference Include="Mono.Posix" />
     <Reference Include="monodoc, Version=1.0.0.0, Culture=neutral, PublicKeyToken=0738eb9f132ed756" />
     <Reference Include="mscorlib" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="pango-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f">
       <SpecificVersion>False</SpecificVersion>
     </Reference>
     <Reference Include="PresentationCore" Condition=" '$(Configuration)' == 'DebugWin32' Or '$(Configuration)' == 'ReleaseWin32' " />
     <Reference Include="PresentationFramework" Condition=" '$(Configuration)' == 'DebugWin32' Or '$(Configuration)' == 'ReleaseWin32' " />
     <Reference Include="System" />
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>..\..\..\packages\System.Collections.Immutable.1.3.1\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
-    </Reference>
     <Reference Include="System.ComponentModel.Composition" />
-    <Reference Include="System.Composition.AttributedModel">
-      <HintPath>..\..\..\packages\System.Composition.AttributedModel.1.0.31\lib\netstandard1.0\System.Composition.AttributedModel.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Convention">
-      <HintPath>..\..\..\packages\Microsoft.Composition.1.0.30\lib\portable-net45+win8+wp8+wpa81\System.Composition.Convention.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Hosting">
-      <HintPath>..\..\..\packages\System.Composition.Hosting.1.0.31\lib\netstandard1.0\System.Composition.Hosting.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.Runtime">
-      <HintPath>..\..\..\packages\System.Composition.Runtime.1.0.31\lib\netstandard1.0\System.Composition.Runtime.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Composition.TypedParts">
-      <HintPath>..\..\..\packages\System.Composition.TypedParts.1.0.31\lib\netstandard1.0\System.Composition.TypedParts.dll</HintPath>
-    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Data" />
     <Reference Include="System.Design" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.IO.Compression" />
-    <Reference Include="System.Reflection.Metadata">
-      <HintPath>..\..\..\packages\System.Reflection.Metadata.1.4.2\lib\netstandard1.1\System.Reflection.Metadata.dll</HintPath>
-    </Reference>
     <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.Threading.Tasks.Dataflow, Version=4.6.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-      <HintPath>..\..\..\packages\System.Threading.Tasks.Dataflow.4.7.0\lib\netstandard1.0\System.Threading.Tasks.Dataflow.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.Windows" Condition=" '$(Configuration)' == 'DebugWin32' Or '$(Configuration)' == 'ReleaseWin32' " />
@@ -204,13 +144,20 @@
     <Reference Include="Xamarin.Mac" Condition=" '$(Configuration)' == 'DebugMac' Or '$(Configuration)' == 'ReleaseMac' ">
       <HintPath>..\..\..\external\Xamarin.Mac.dll</HintPath>
     </Reference>
-    <Reference Include="YamlDotNet">
-      <HintPath>..\..\..\packages\YamlDotNet.Signed.4.0.1-pre291\lib\net35\YamlDotNet.dll</HintPath>
-    </Reference>
-    <Reference Include="System.ValueTuple">
-      <HintPath>..\..\..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
+    <PackageReference Include="Microsoft.TemplateEngine.Abstractions" Version="1.0.0-beta2-20170523-241" />
+    <PackageReference Include="Microsoft.TemplateEngine.Core" Version="1.0.0-beta2-20170523-241" />
+    <PackageReference Include="Microsoft.TemplateEngine.Core.Contracts" Version="1.0.0-beta2-20170523-241" />
+    <PackageReference Include="Microsoft.TemplateEngine.Edge" Version="1.0.0-beta2-20170523-241" />
+    <PackageReference Include="Microsoft.TemplateEngine.Orchestrator.RunnableProjects" Version="1.0.0-beta2-20170523-241" />
+    <PackageReference Include="Microsoft.TemplateEngine.Utils" Version="1.0.0-beta2-20170523-241" />
+    <PackageReference Include="Newtonsoft.Json" Version="10.0.3" />
+    <PackageReference Include="JetBrains.SharpZipLib.Stripped" Version="0.87.20170615.10" />
+    <PackageReference Include="System.Collections.Immutable" Version="1.3.1" />
+    <PackageReference Include="System.Composition" Version="1.0.31" />
+    <PackageReference Include="System.IO.Compression" Version="4.3.0" />
+    <PackageReference Include="System.Threading.Tasks.DataFlow" Version="4.7.0" />
+    <PackageReference Include="System.ValueTuple" Version="4.4.0" />
+    <PackageReference Include="YamlDotNet.Signed" Version="4.0.1-pre291" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MonoDevelop.Core\MonoDevelop.Core.csproj">
@@ -9648,7 +9595,6 @@
     <None Include="MonoDevelop.Ide.dll.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="packages.config" />
     <None Include="MonoDevelop.Ide.Editor.Highlighting\syntaxes\FSharp\F#Comments.tmPreferences" />
     <None Include="MonoDevelop.Ide.Editor.Highlighting\syntaxes\AppleStrings\AppleStrings.sublime-syntax" />
     <None Include="MonoDevelop.Ide.Editor.Highlighting\VSCodeImport\make\OSSREADME.json" />

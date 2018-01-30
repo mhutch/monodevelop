@@ -8,31 +8,10 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{1038FBD8-750E-4081-BC65-D89FFED3C881}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SubversionAddinWindows</RootNamespace>
     <AssemblyName>SubversionAddinWindows</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <FileUpgradeFlags>
-    </FileUpgradeFlags>
-    <OldToolsVersion>3.5</OldToolsVersion>
-    <UpgradeBackupLocation />
-    <TargetFrameworkProfile />
-    <PublishUrl>publish\</PublishUrl>
-    <Install>true</Install>
-    <InstallFrom>Disk</InstallFrom>
-    <UpdateEnabled>false</UpdateEnabled>
-    <UpdateMode>Foreground</UpdateMode>
-    <UpdateInterval>7</UpdateInterval>
-    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
-    <UpdatePeriodically>false</UpdatePeriodically>
-    <UpdateRequired>false</UpdateRequired>
-    <MapFileExtensions>true</MapFileExtensions>
-    <ApplicationRevision>0</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
-    <IsWebBootstrapper>false</IsWebBootstrapper>
-    <UseApplicationTrust>false</UseApplicationTrust>
-    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -60,12 +39,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
-    <Reference Include="SharpSvn">
-      <HintPath>..\..\..\..\packages\SharpSvn.1.8-x86.1.8013.3694.107\lib\net40\SharpSvn.dll</HintPath>
-    </Reference>
-    <Reference Include="SharpSvn.UI">
-      <HintPath>..\..\..\..\packages\SharpSvn.1.8-x86.1.8013.3694.107\lib\net40\SharpSvn.UI.dll</HintPath>
-    </Reference>
+    <PackageReference id="SharpSvn.1.8-x86" Version="1.8013.3694.107" />
   </ItemGroup>
   <ItemGroup>
     <InternalsVisibleTo Include="VersionControl.Subversion.Win32.Tests" />
@@ -74,26 +48,7 @@
     <Compile Include="SvnSharpClient.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AddinInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
     <EmbeddedResource Include="Manifest.addin.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
-      <Install>false</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
-      <Visible>False</Visible>
-      <ProductName>.NET Framework 3.5 SP1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
-    <BootstrapperPackage Include="Microsoft.Windows.Installer.3.1">
-      <Visible>False</Visible>
-      <ProductName>Windows Installer 3.1</ProductName>
-      <Install>true</Install>
-    </BootstrapperPackage>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
@@ -123,6 +78,7 @@
       <Private>False</Private>
     </ProjectReference>
   </ItemGroup>
+  <!-- FIXME
   <ItemGroup>
     <None Include="..\..\..\..\packages\SharpSvn.1.8-x86.1.8013.3694.107\lib\net40\SharpPlink-Win32.svnExe">
       <Link>SharpPlink-Win32.svnExe</Link>
@@ -132,6 +88,6 @@
       <Link>SharpSvn-DB44-20-win32.svnDll</Link>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <None Include="packages.config" />
   </ItemGroup>
+    -->
 </Project>

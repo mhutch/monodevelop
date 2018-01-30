@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>MonoDevelop.AspNetCore</RootNamespace>
     <AssemblyName>MonoDevelop.AspNetCore</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <Templates1xVersion>1.0.0-beta2-20170430-208</Templates1xVersion>
     <TemplatesVersion>1.0.0-beta2-20170727-301</TemplatesVersion>
   </PropertyGroup>
@@ -38,10 +38,6 @@
     <Reference Include="glib-sharp, Version=2.12.0.0, Culture=neutral, PublicKeyToken=35e10195dab3c99f" />
     <Reference Include="Mono.Posix" />
     <Reference Include="Mono.Cairo" />
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MonoDevelop.AspNetCore.Templating\AspNetCoreFileTemplateCondition.cs" />
@@ -175,6 +171,8 @@
          <Version>$(TemplatesVersion)</Version>
        </NuGetPackage>
      </ItemGroup>
+     <!-- FIXME
      <Copy SourceFiles="..\..\..\packages\%(NuGetPackage.Identity).%(NuGetPackage.Version)\%(NuGetPackage.Identity).%(NuGetPackage.Version).nupkg" DestinationFolder="$(OutputPath)\Templates" SkipUnchangedFiles="true" />
+     -->
    </Target>
 </Project>

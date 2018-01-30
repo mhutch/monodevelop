@@ -9,7 +9,7 @@
     <OutputType>Library</OutputType>
     <RootNamespace>MonoDevelop.SourceEditor</RootNamespace>
     <AssemblyName>MonoDevelop.SourceEditor</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>True</DebugSymbols>
@@ -159,25 +159,8 @@
     </Reference>
     <Reference Include="System.Core" />
     <Reference Include="Mono.Cairo" />
-    <Reference Include="System.Reflection.Metadata">
-      <HintPath>..\..\..\build\bin\System.Reflection.Metadata.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="System.Collections.Immutable">
-      <HintPath>..\..\..\build\bin\System.Collections.Immutable.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="Microsoft.CodeAnalysis">
-      <HintPath>..\..\..\build\bin\Microsoft.CodeAnalysis.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Runtime.Serialization" />
-    <Reference Include="System.ValueTuple">
-      <HintPath>..\..\..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
-      <Private>False</Private>
-    </Reference>
-    <Reference Include="mscorlib" />
   </ItemGroup>
   <ItemGroup>
     <None Include="MonoDevelop.SourceEditor.dll.config">
@@ -301,61 +284,9 @@
     <Compile Include="VSEditor\TextSelection.cs" />
     <Compile Include="VSEditor\TextViewRoleSet.cs" />
     <Compile Include="VSEditor\VacuousTextDataModel.cs" />
-    <Compile Include="VSEditor\FakeWpf\Geometry.cs" />
-    <Compile Include="VSEditor\FakeWpf\Mouse.cs" />
-    <Compile Include="VSEditor\FakeWpf\SimulatingExtensions.cs" />
-    <Compile Include="VSEditor\Language\Def\Intellisense\IPopupIntellisensePresenter.cs" />
-    <Compile Include="VSEditor\Language\Impl\Helpers.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\BaseIntellisenseSession.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\CurrentLineSpaceReservationAgent.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\IMultiSessionIntellisensePresenter.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\IntellisenseManager.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\IntellisenseSession.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\IntellisenseSessionStack.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\IntellisenseSessionStackMapService.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\IntellisenseSpaceReservationManagers.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\MultiSessionIntellisensePresenterProvider.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\SignatureHelp\DefaultSignatureHelpPresenter.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\SignatureHelp\DefaultSignatureHelpPresenterProvider.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\SignatureHelp\DefaultSignatureHelpPresenterSurfaceElement.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\SignatureHelp\SignatureHelpBroker.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\SignatureHelp\SignatureHelpParameterBoldingClassfier.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\SignatureHelp\SignatureHelpSession.cs" />
-    <Compile Include="VSEditor\Language\Impl\Intellisense\SignatureHelp\SignatureHelpSessionView.cs" />
-    <Compile Include="VSEditor\Language\Impl\QuickInfo\AsyncQuickInfoBroker.cs" />
-    <Compile Include="VSEditor\Language\Impl\QuickInfo\AsyncQuickInfoSession.cs" />
-    <Compile Include="VSEditor\Language\Impl\QuickInfo\QuickInfoController.cs" />
-    <Compile Include="VSEditor\Language\Impl\QuickInfo\QuickInfoTextViewCreationListener.cs" />
-    <Compile Include="VSEditor\Language\Impl\QuickInfo\SquiggleQuickInfoSource.cs" />
-    <Compile Include="VSEditor\Language\Impl\QuickInfo\SquiggleQuickInfoSourceProvider.cs" />
-    <Compile Include="VSEditor\Language\Util\LanguageUtil\IntellisenseSourceCache.cs" />
-    <Compile Include="VSEditor\Language\Util\LanguageUtil\IntellisenseUtilities.cs" />
-    <Compile Include="VSEditor\Text\Def\TextUIWpf\Adornments\ToolTipPresenterStyle.cs" />
-    <Compile Include="VSEditor\Text\Def\TextUIWpf\Editor\ISpaceReservationAgent.cs" />
-    <Compile Include="VSEditor\Text\Def\TextUIWpf\Editor\ISpaceReservationManager.cs" />
-    <Compile Include="VSEditor\Text\Def\TextUIWpf\Editor\SpaceReservationAgentChangedEventArgs.cs" />
-    <Compile Include="VSEditor\Text\Def\TextUIWpf\Editor\SpaceReservationManagerDefinition.cs" />
-    <Compile Include="VSEditor\Text\Impl\ToolTipAdornment\GuardedToolTipPresenter.cs" />
-    <Compile Include="VSEditor\Text\Impl\ToolTipAdornment\IViewElementFactoryMetadata.cs" />
-    <Compile Include="VSEditor\Text\Impl\ToolTipAdornment\ToolTipService.cs" />
-    <Compile Include="VSEditor\Text\Impl\ToolTipAdornment\ViewElementFactoryService.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfToolTipAdornment\BaseWpfToolTipPresenter.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfToolTipAdornment\DefaultToolTipPresenterStyle.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfToolTipAdornment\MouseTrackingWpfToolTipPresenter.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfToolTipAdornment\SpanTrackingWpfToolTipPresenter.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfToolTipAdornment\ToolTipStyleFactory.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfToolTipAdornment\WpfToolTipPresenterProvider.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfToolTipAdornment\Legacy\ToolTipProvider.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfToolTipAdornment\Legacy\ToolTipProviderFactory.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfToolTipAdornment\ViewElementFactories\WpfClassifiedTextElementViewElementFactory.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfToolTipAdornment\ViewElementFactories\WpfContainerElementViewElementFactory.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfToolTipAdornment\ViewElementFactories\WpfImageElementViewElementFactory.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfView\PopupAgent.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfView\SpaceReservationManager.cs" />
-    <Compile Include="VSEditor\Text\Impl\WpfView\SpaceReservationStack.cs" />
-    <Compile Include="VSEditor\Text\Util\TextDataUtil\MappingHelper.cs" />
-    <Compile Include="VSEditor\VisualStudio\Impl\ViewAdapter\TipManager.cs" />
-    <Compile Include="MonoDevelop.SourceEditor\SourceEditorView.IMonoDevelopEditorOperations.cs" />
+    <Compile Include="MonoDevelop.SourceEditor\TextMarker\LineSeparatorMarker.cs" />
+    <Compile Include="MonoDevelop.SourceEditor.QuickTasks\QuickTaskOverviewMode.IndicatorDrawingCache.cs" />
+    <Compile Include="MonoDevelop.SourceEditor.QuickTasks\QuickTaskOverviewMode.IdleUpdater.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="gtk-gui\gui.stetic">
