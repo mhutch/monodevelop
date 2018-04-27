@@ -160,7 +160,11 @@ namespace Mono.TextEditor
 
 		void SyntaxMode_HighlightingStateChanged (object sender, MonoDevelop.Ide.Editor.LineEventArgs e)
 		{
-			CommitMultipleLineUpdate (e.Line.LineNumber, e.Line.LineNumber);
+			if (e == MonoDevelop.Ide.Editor.LineEventArgs.AllLines) {
+				CommitUpdateAll (true);
+			} else { 
+				CommitMultipleLineUpdate (e.Line.LineNumber, e.Line.LineNumber, true);
+			}
 		}
 
 		void OnSyntaxModeChanged (SyntaxModeChangeEventArgs e)
@@ -264,7 +268,7 @@ namespace Mono.TextEditor
 
 		void OnTextBufferChanged(object sender, Microsoft.VisualStudio.Text.TextContentChangedEventArgs args)
 		{
-			if (args.Changes == null)
+			if (args.Changes == null || args.Changes.Count == 0)
 				return;
 			var changes = new List<TextChange> ();
 			foreach (var change in args.Changes) {
@@ -1877,6 +1881,13 @@ namespace Mono.TextEditor
 		public void CommitUpdateAll ()
 		{
 			RequestUpdate (new UpdateAll ());
+			CommitDocumentUpdate ();
+		}
+
+		// TODO: Merge with CommitUpdateAll (ABI break!)
+		public void CommitUpdateAll (bool removeLineCache)
+		{
+			RequestUpdate (new UpdateAll () { RemoveLineCache = removeLineCache});
 			CommitDocumentUpdate ();
 		}
 
